@@ -42,7 +42,7 @@ public class FirstFragment extends Fragment {
           String mobile=userMobile.getText().toString();
             Toast.makeText(getActivity(),"Your Mobile Number is "+mobile,Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:+8801632241032" ));
+            intent.setData(Uri.parse("tel:"+mobile ));
             if (intent.resolveActivity(requireActivity().getPackageManager()) != null) {
                 startActivity(intent);
             }
